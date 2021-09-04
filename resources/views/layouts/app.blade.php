@@ -26,7 +26,7 @@
 </head>
 <body>
     <div id="app">
-        <header class="lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2">
+        <header class="sm:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2">
             <div class="flex-1 flex items-center">
                <img class="h-12 pr-3" src="{{ asset('images/credit.svg')}}" alt="Credit">
                  <span class="text-base">   
