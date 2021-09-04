@@ -39,6 +39,7 @@ class ClientController extends Controller
         $client = new Client;
         $client->name = $request->client_name;
         $client->surname = $request->client_surname;
+        $client->personalID = $request->client_personalID;
         $client->save();
         return redirect()->route('client.index');
     }

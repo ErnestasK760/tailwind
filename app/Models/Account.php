@@ -13,5 +13,9 @@ class Account extends Model
     {
         return $this->belongsTo(Client::class, 'client_id', 'id');
     }
+    public function createAccnum()
+    {
+        return $accnum = "LT01" . rand(0, 99) . rand(1000, 9999) . rand(1000, 9999) . rand(100, 999) . rand(100, 999);
+    }
  
 }

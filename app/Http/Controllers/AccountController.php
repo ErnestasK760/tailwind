@@ -39,9 +39,8 @@ class AccountController extends Controller
     public function store(Request $request)
     {
         $account = new Account;
-       $account->accnum = $request->account_accnum;
+       $account->accnum = $account->createAccnum();
        $account->balance = $request->account_balance;
-       $account->about = $request->account_about;
        $account->client_id = $request->client_id;
        $account->save();
        return redirect()->route('account.index');
@@ -79,9 +78,8 @@ class AccountController extends Controller
      */
     public function update(Request $request, Account $account)
     {
-        $account->accnum = $request->account_accnum;
+        $account->accnum = $account->accnum; //$client->clientAccounts->count())
         $account->balance = $request->account_balance;
-        $account->about = $request->account_about;
         $account->client_id = $request->client_id;
         $account->save();
         return redirect()->route('account.index');

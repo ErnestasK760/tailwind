@@ -3,7 +3,7 @@
 @section('content')
 
 @foreach ($clients as $client)
-  <a href="{{route('client.edit',[$client])}}">{{$client->name}} {{$client->surname}}</a>
+  <a href="{{route('client.edit',[$client])}}">{{$client->name}} {{$client->surname}} {{$client->personalID}}</a>
   <form method="POST" action="{{route('client.destroy', $client)}}">
    @csrf
    <button type="submit">DELETE</button>
