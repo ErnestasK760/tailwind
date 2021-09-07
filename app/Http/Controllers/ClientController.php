@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Client;
+use App\Models\Operation;
+use App\Models\Account;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -41,7 +43,11 @@ class ClientController extends Controller
         $client->surname = $request->client_surname;
         $client->personalID = $request->client_personalID;
         $client->save();
-        return redirect()->route('client.index');
+        $operation = new Operation;
+        $operation->value = 0;
+        $operation->operation_title_id = 1;
+        $operation->save();
+        // return redirect()->route('client.index');
     }
 
     /**

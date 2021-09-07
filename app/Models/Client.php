@@ -12,4 +12,9 @@ class Client extends Model
     {
         return $this->hasMany(Account::class, 'client_id', 'id');
     }
+
+    public function clientOperations()
+    {
+        return $this->hasMany(Operation::class, 'client_id', 'id');
+    }
 }

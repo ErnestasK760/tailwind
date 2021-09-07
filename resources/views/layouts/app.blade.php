@@ -42,6 +42,8 @@
               <ul class="sm:flex items-center justify-between text-base text-gray-700 sm:pt-0">
                 <li><a class="lg:p-4 py-3 px-2 block border-b-2 border-transparent hover:no-underline hover:border-indigo-400" href="#">Accounts</a></li>
                 <li><a class="lg:p-4 py-3 px-2 block border-b-2 border-transparent hover:no-underline hover:border-indigo-400" href="#">Clients</a></li>
+                <li><a class="lg:p-4 py-3 px-2 block border-b-2 border-transparent hover:no-underline hover:border-indigo-400" href="#">Statistics</a></li>
+                <li><a class="lg:p-4 py-3 px-2 block border-b-2 border-transparent hover:no-underline hover:border-indigo-400" href="#">Operations</a></li>
                 <a href="#" class="ml-3 flex justify-start pointer-cursor">
                     <img class="rounded-full w-10 h-10 border-2 border-transparent hover:border-indigo-400" src="{{ asset('images/avatar.svg')}}" alt="Andy Leverenz">
                 </a>

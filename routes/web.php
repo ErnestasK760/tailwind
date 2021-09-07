@@ -36,6 +36,14 @@ Route::group(['prefix' => 'accounts'], function(){
     Route::post('delete/{account}', [AccountController::class, 'destroy'])->name('account.destroy');
     Route::get('show/{account}', [AccountController::class, 'show'])->name('account.show');
 });
+Route::group(['prefix' => 'operations'], function(){
+    Route::get('', [OperationController::class, 'index'])->name('operation.index');
+    Route::get('create', [OperationController::class, 'create'])->name('operation.create');
+    Route::post('store', [OperationController::class, 'store'])->name('operation.store');
+    Route::post('delete/{operation}', [OperationController::class, 'destroy'])->name('operation.destroy');
+    Route::get('show/{operation}', [OperationController::class, 'show'])->name('operation.show');
+});
+ 
  
 
  
