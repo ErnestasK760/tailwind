@@ -8,13 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Operation extends Model
 {
     use HasFactory;
-    public function operation()
+    public function titleOperations()
     {
         return $this->belongsTo(Operation_title::class, 'operation_title_id', 'id');
     }
-    public function operation()
+    public function userOperations()
     {
-        return $this->belongsTo(Client::class, 'client_id', 'id');
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 }
 }

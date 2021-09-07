@@ -18,6 +18,8 @@ class CreateClientsTable extends Migration
             $table->string('name',32);
             $table->string('surname',32);
             $table->string('personalID',11);
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

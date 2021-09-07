@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Operation;
+use App\Models\Account;
 use Illuminate\Http\Request;
 
 class OperationController extends Controller
@@ -14,7 +15,8 @@ class OperationController extends Controller
      */
     public function index()
     {
-        //
+        $operations = Account::all();
+        return view('operation.index', ['operations' => $operations]);
     }
 
     /**
@@ -24,7 +26,8 @@ class OperationController extends Controller
      */
     public function create()
     {
-        //
+        // $clients = Client::all();
+        // return view('account.create', ['clients' => $clients]);
     }
 
     /**
@@ -38,7 +41,7 @@ class OperationController extends Controller
         $operation = new Operation;
         $operation->value = $request->operation_value->default('0');
         $operation->save();
-        
+        return redirect()->route('operation.index');
     }
 
     /**

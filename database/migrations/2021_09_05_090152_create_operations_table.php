@@ -18,8 +18,8 @@ class CreateOperationsTable extends Migration
             $table->integer('value');
             $table->unsignedBigInteger('operation_title_id');
             $table->foreign('operation_title_id')->references('id')->on('operation_titles');
-            $table->unsignedBigInteger('client_id');
-            $table->foreign('client_id')->references('id')->on('clients');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
