@@ -38,6 +38,7 @@ class OperationController extends Controller
         $operation = new Operation;
         $operation->value = $request->operation_value->default('0');
         $operation->save();
+        
     }
 
     /**

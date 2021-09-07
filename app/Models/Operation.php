@@ -12,4 +12,9 @@ class Operation extends Model
     {
         return $this->belongsTo(Operation_title::class, 'operation_title_id', 'id');
     }
+    public function operation()
+    {
+        return $this->belongsTo(Client::class, 'client_id', 'id');
+    }
+}
 }
